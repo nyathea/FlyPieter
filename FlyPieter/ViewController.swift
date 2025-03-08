@@ -24,7 +24,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
     
     private var baseAmplification: Double = 4.9
     private var decayFactor: Double = 2.7
-    private var pitchBaseAmplification: Double = 5.1
+    private var pitchBaseAmplification: Double = 4.9
     private var pitchDecayFactor: Double = 2.7
     
     private let debug = true
@@ -77,6 +77,11 @@ class ViewController: UIViewController, WKScriptMessageHandler {
                                 webkit.messageHandlers.missileFired.postMessage('Missile fired');
                             }
                         };
+                
+                        // Inject CSS
+                        const style = document.createElement('style');
+                        style.textContent = '.vehicle-option { height: 24px !important; }';
+                        document.head.appendChild(style);
                     })();
                 """,
                 injectionTime: .atDocumentEnd,

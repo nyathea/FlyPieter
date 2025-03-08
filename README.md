@@ -26,7 +26,7 @@ Inherits from `UIViewController` and conforms to `WKScriptMessageHandler`.
 - Calibration variables:
   - `baseAmplification`: Roll amplification factor (default: 4.9)
   - `decayFactor`: Roll decay factor (default: 2.7)
-  - `pitchBaseAmplification`: Pitch amplification factor (default: 5.1)
+  - `pitchBaseAmplification`: Pitch amplification factor (default: 4.9)
   - `pitchDecayFactor`: Pitch decay factor (default: 2.7)
 - `debug`: Boolean to toggle debug UI (default: `true`)
 
